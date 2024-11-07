@@ -5,5 +5,5 @@ const pool = new Pool({
   connectionString: process.env.POSTGRES_URL,
 });
 
-export const query = (text: string, params?: (string | number)[]) =>
+export const query = (text: string, params?: (string | number | boolean)[]) =>
   pool.query(text, params);
